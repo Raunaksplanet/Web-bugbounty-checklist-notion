@@ -1167,6 +1167,7 @@ subfinder -d <target-domain> | alterx | dnsx
 ```bash
 dirsearch -u "" -e * -t 50 -F --random-agent --follow-redirects --full-url --recursive --exclude-status=404
 dirsearch -u "" -f -F -x 403,404
+dirsearch -u "https://wwwsec-i.lienhardt.ch/" -e '*' -t 50 -F --random-agent --follow-redirects --full-url --recursive --exclude-status=403,404
 cat 403_subs.txt | waybackurls | uniq
 awk '{print $1}'
 ```
